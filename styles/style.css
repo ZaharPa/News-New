@@ -1,0 +1,476 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	background: linear-gradient(to bottom, #000D9B, white 12%, white 85%, black );
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.listOfNews {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+nav ul, .listOfNews ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+	margin-left: -4%;
+    background-color: #0056b3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 0 2%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.footPage{
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+	text-align: right;
+	height: 5%;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+.reg{
+	background: linear-gradient(to bottom, white, #000D9B);
+	margin: -2%;
+	padding: 15% 12.4% 19% 40%;
+}
+
+body:has(div.log), body:has(div.reg){
+	overflow:hidden;
+}
+
+.log{
+	background: linear-gradient(to bottom, white, #000D9B);
+	padding: 17.6% 12.4% 20% 40%;
+	margin: -2%;
+	overflow: hidden;
+}
+
+.reg input, .log input {
+    width: 60%;
+    padding: 10px;
+    margin-left: auto - 10%;
+  	margin-right: auto;
+  	margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.reg form, .log form {
+    color: white;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.subReg input {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.subReg input:hover {
+    background-color: #555;
+}
+
+.passtiptext {
+    color: #804040;
+    font-size: 14px;
+}
+
+body:has(div.add-article){
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.add-article{
+	display: block;
+    overflow: auto;
+    margin: 0 auto;   
+   	font-size: 18px; 
+}
+
+.add-article input{
+	margin-bottom: 3%;
+	font-size: 18px;
+}
+
+.add-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-article label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.add-article textarea {
+    font-size: 16px;
+    padding: 10px;
+	width: 1000px;
+    height: 200px;
+}
+
+.listOfNews {
+	display: block;
+    width: 80%;
+    overflow: auto;
+    margin-left: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.article {
+	display: flex;
+	align-items: flex-start;
+	padding: 10px;
+	margin-bottom: 20px;
+	position: relative;	
+}
+
+.article .photoNews {
+	flex: 0 0 150px;
+	margin-right: 15px;
+}
+
+.article .photoNews img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.article .content {
+	flex: 1;
+}
+
+.article .content h2 {
+	margin: 0;
+	font-size: 1.5em;
+}
+
+.article .content p {
+	margin: 10px 0;
+	line-height: 1.6;
+}
+
+.article .actions {
+	display: flex;
+	gap: 15px;
+}
+
+.article .actions span {
+	cursor: pointer;
+	color: blue;
+}
+
+.article .actions span a{
+	text-decoration: none;
+	padding-left: 10px;
+	color: #0056b3;
+}
+
+.article .count-view {
+	position: absolute;
+	top: -10px;
+	right: 10px;
+	font-weight: bold;
+}
+
+.listOfNews .filter{
+	display: flex;
+	justify-content: center;
+	margin: 0 0 10px 0;
+}
+
+.listOfNews .filter a {
+	display: inline-block;
+	padding: 15px 8px 0 8px;
+	text-decoration: none;
+	border: 1px solid #0056b3;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.3s, color 0,3s;
+}
+.listOfNews .pagination {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.listOfNews .pagination a {
+	display: inline-block;
+	padding: 10px 15px;
+	text-decoration: none;
+	border: 1px solid #0056b3;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.3s, color 0,3s;
+}
+
+.listOfNews .pagination a:hover, .listOfNews .filter a:hover  {
+	background-color: #0056b3;
+    color: white;
+}
+
+.once-news {
+	display: flex;
+	margin-top: 50px;
+	align-items: flex-start;
+	padding: 10px;
+	margin-bottom: 20px;
+	position: relative;	
+}
+
+.once-news .photoNews {
+	flex: 0 0 150px;
+	margin-right: 15px;
+	margin-top: 60px;
+}
+
+.once-news .photoNews img {
+	padding-left: 10px;
+	width: 400px;
+	height: auto;
+	display: block;
+}
+
+.once-news .content {
+	flex: 1;
+	margin: 10px 100px 10px 15px;
+	
+}
+
+.once-news .content h2 {
+	margin: 0;
+	font-size: 1.5em;
+	font-family: 'Georgia', serif; 
+}
+
+.once-news .content p {
+	line-height: 1.6;
+	font-size: 1.3em;
+	font-family: 'Arial', sans-serif;
+	text-align: justify;
+}
+
+.once-news .count-view {
+	position: absolute;
+	top: 10px;
+	right: 150px;
+	font-weight: bold;
+}
+
+.about-us{
+	display: block;
+	padding: 70px 60px 0 20px;
+}
+
+.about-us h2{
+	margin-left: 7px;
+	font-size: 1.5em;
+	font-family: 'Georgia', serif; 
+}
+
+.about-us p{
+	line-height: 1.6;
+	font-size:1.3em;
+	font-family: 'Arial', sans-serif;
+	text-align: justify;
+}
+
+@media (max-width: 768px) {
+	.listOfNews {
+		padding: 5px;
+		margin-top: 60px;
+		margin-bottom: 70px;
+		margin-left: 15px;
+	}
+	
+	nav {
+		margin-left: 0;
+		padding: 0 10px;
+	}
+	
+	 #navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0056b3;
+    }
+    
+     .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    
+     #navMenu.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 15px;
+    }
+	
+	.footPage {
+		height: auto;
+		padding: 10px;
+		text-align: center;
+	}
+	
+	.reg input, .log input {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.reg form, .log form {
+		font-size: 16px;
+		padding: 0 10px;
+	}
+	
+	.article, .once-news {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.article .photoNews, .once-news .photoNews {
+		flex: 0 0 auto;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	
+	.article .content, .once-news .content {
+		position: static;
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+	body {
+		font-size: 14px;
+	}
+	
+	.about-us h2, .once-news .content h2 {
+		font-size: 1.3em;
+	}
+	
+	.about-us p, .once-news .content p {
+		font-size: 1.1em;
+	}
+	
+	.subReg input {
+		padding: 12px;
+		font-size: 16px;
+	}
+	
+	.listOfNews .pagination a, .listOfNews .filter a {
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.article, .once-news {
+		padding: 5px;
+	}
+	
+	.article .content h2, .once-news .content h2, .about-us h2 {
+		font-size: 1.2em;
+	}
+	
+	.article .content p, .once-news .content p, .about-us h2 {
+		font-size: 1em;
+	}
+	
+	body {
+		font-size: 12px;
+	}
+}
+
+#menuToggle.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+
+#menuToggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menuToggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #fff;
+}

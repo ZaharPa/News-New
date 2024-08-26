@@ -1,0 +1,9 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"scripts\\class\\" : "scripts/class/",
+			"scripts\\interface\\" : "scripts/interface/",
+			"scripts\\" : "scripts"
+		}
+	}
+}
