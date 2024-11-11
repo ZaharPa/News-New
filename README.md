@@ -9,7 +9,7 @@
 - **Modular Architecture**: Clear structure with interfaces to support easy expansion and maintenance.
 
 ## Tech Stack
-- **Frontend**: HTML and CSS for the user interface, with JavaScript for interactive elements.
+- **Frontend**: HTML and CSS for the user interface.
 - **Backend**: PHP for server-side processing and business logic.
 - **Database**: MySQL for storing news and user data.
 
@@ -46,7 +46,6 @@
     - `scripts`: Contains PHP classes and interfaces for handling requests and database interactions.
     - `class`: PHP classes implementing functionality.
     - `interface`: Interface definitions for core methods.
-    - `JavaScript`: JavaScript files for client-side interactivity.
     - `styles`: CSS files for styling.
     - `images`: Contains images for news articles. 
 
